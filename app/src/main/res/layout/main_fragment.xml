@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="45dp"
         android:layout_marginTop="120dp"
-        android:backgroundTint="#FF4500"
+        android:backgroundTint="#FF9933"
         android:textSize="15sp"
         android:textColor="#000000"
         android:text="Food"
@@ -28,7 +28,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="120dp"
         android:layout_marginEnd="45dp"
-        android:backgroundTint="#FF4500"
+        android:backgroundTint="#FF9933"
         android:textSize="15sp"
         android:textColor="#000000"
         android:text="Hotels" />
@@ -42,7 +42,7 @@
         android:layout_marginStart="45dp"
         android:layout_marginTop="255dp"
         android:textSize="15sp"
-        android:backgroundTint="#FF4500"
+        android:backgroundTint="#FF9933"
         android:textColor="#000000"
         android:text="Tourist Attractions" />
 
@@ -54,7 +54,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="255dp"
         android:layout_marginEnd="45dp"
-        android:backgroundTint="#FF4500"
+        android:backgroundTint="#FF9933"
         android:textSize="11sp"
         android:textColor="#000000"
         android:text="Transportation" />
@@ -67,7 +67,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="45dp"
         android:layout_marginBottom="290dp"
-        android:backgroundTint="#FF4500"
+        android:backgroundTint="#FF9933"
         android:textSize="15sp"
         android:textColor="#000000"
         android:text="Spend Tracker" />
@@ -80,7 +80,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="290dp"
-        android:backgroundTint="#FF4500"
+        android:backgroundTint="#FF9933"
         android:textSize="15sp"
         android:textColor="#000000"
         android:text="Currency Converter" />
@@ -92,7 +92,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="160dp"
-        android:backgroundTint="#FF4500"
+        android:backgroundTint="#FF9933"
         android:textSize="15sp"
         android:textColor="#000000"
         android:text="Itinerary" />

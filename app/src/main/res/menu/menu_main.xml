@@ -13,7 +13,7 @@
         android:id="@+id/action_Trips"
         android:title="Trips"
         android:icon="@drawable/ic_trips"
-        app:showAsAction="never" />
+        app:showAsAction="" />
 
     <item
         android:id="@+id/action_logout"

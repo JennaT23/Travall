@@ -86,7 +86,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="175dp"
-        android:backgroundTint="#FF4500"
+        android:backgroundTint="#FF9933"
         android:text="Login" />
 
     <Button
@@ -98,7 +98,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="135dp"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="#FF4500"
+        android:backgroundTint="#FF9933"
         android:text="Create Login" />
 
 
