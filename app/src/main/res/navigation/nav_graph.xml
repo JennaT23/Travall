@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.laurawilson.travall3.MainFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/main_fragment">
+
+        <action
+            android:id="@+id/action_MainFragment_to_FoodWindowFragment"
+            app:destination="@id/FoodWindowFrag" />
+
+        <action
+            android:id="@+id/action_MainFragment_to_HotelWindowFragment"
+            app:destination="@id/HotelWindowFrag" />
+
+        <action
+            android:id="@+id/action_MainFragment_to_AttractionWindowFragment"
+            app:destination="@id/AttractWindowFrag" />
+
+        <action
+            android:id="@+id/action_MainFragment_to_TransportWindowFragment"
+            app:destination="@id/TransportWindowFrag" />
+        <action
+            android:id="@+id/action_MainFragment_to_SpendWindowFragment"
+            app:destination="@id/SpendWindowFrag" />
+
+        <action
+            android:id="@+id/action_MainFragment_to_CurrencyWindowFragment"
+            app:destination="@id/CurrencyWindowFrag" />
+
+        <action
+            android:id="@+id/action_MainFragment_to_ItineraryWindowFragment"
+            app:destination="@id/ItineraryWindowFrag" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FoodWindowFrag"
+        android:name="com.laurawilson.travall3.FoodWindowFrag"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/food_window_fragment">
+
+        <action
+            android:id="@+id/action_FoodWindowFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/HotelWindowFrag"
+        android:name="com.laurawilson.travall3.HotelWindowFrag"
+        android:label="Hotels Near You"
+        tools:layout="@layout/hotel_window_fragment">
+
+        <action
+            android:id="@+id/action_HotelWindowFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AttractWindowFrag"
+        android:name="com.laurawilson.travall3.AttractionWindowFrag"
+        android:label="Attractions Near You"
+        tools:layout="@layout/attraction_window_fragment">
+
+        <action
+            android:id="@+id/action_AttractionWindowFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TransportWindowFrag"
+        android:name="com.laurawilson.travall3.TransportWindowFrag"
+        android:label="Transportation Near You"
+        tools:layout="@layout/transport_window_fragment">
+
+        <action
+            android:id="@+id/action_TransportWindowFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SpendWindowFrag"
+        android:name="com.laurawilson.travall3.SpendWindowFrag"
+        android:label="Spend Tracker"
+        tools:layout="@layout/spend_window_fragment">
+
+        <action
+            android:id="@+id/action_SpendWindowFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CurrencyWindowFrag"
+        android:name="com.laurawilson.travall3.CurrencyWindowFrag"
+        android:label="Currency Converter"
+        tools:layout="@layout/currency_window_fragment">
+
+        <action
+            android:id="@+id/action_CurrencyWindowFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ItineraryWindowFrag"
+        android:name="com.laurawilson.travall3.ItineraryWindowFrag"
+        android:label="Itinerary"
+        tools:layout="@layout/itinerary_window_fragment">
+
+        <action
+            android:id="@+id/action_ItineraryWindowFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+</navigation>
