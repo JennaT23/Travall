@@ -21,9 +21,9 @@ public class AttractionWindowFrag extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = AttractionWindowFragmentBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        View view = inflater.inflate(R.layout.attraction_window_fragment, container, false);
 
+        return view;
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

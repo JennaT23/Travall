@@ -20,8 +20,9 @@ public class ItineraryWindowFrag extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = ItineraryWindowFragmentBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        View view = inflater.inflate(R.layout.itinerary_window_fragment, container, false);
+
+        return view;
 
     }
 
