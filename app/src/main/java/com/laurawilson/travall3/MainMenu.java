@@ -1,15 +1,14 @@
 package com.laurawilson.travall3;
 
+import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
@@ -17,6 +16,7 @@ import com.laurawilson.travall3.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+
 
 public class MainMenu extends AppCompatActivity {
 
@@ -36,6 +36,7 @@ public class MainMenu extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
+
     }
 
     @Override
@@ -54,16 +55,17 @@ public class MainMenu extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_MainMenu) {
-            return true;
-        }
-        if (id == R.id.action_Trips) {
-            return true;
-        }
-        if (id == R.id.action_logout) {
-            return true;
-        }
 
-        return super.onOptionsItemSelected(item);
+
+            return true;
+        }
+        else if (id == R.id.action_logout) {
+            Intent logout = new Intent(MainMenu.this, Login.class);
+            startActivity(logout);
+            return true;
+        }
+        else
+            return super.onOptionsItemSelected(item);
     }
 
     @Override

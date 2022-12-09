@@ -2,18 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.laurawilson.travall3.MainActivity">
+    tools:context="com.laurawilson.travall3.MainMenu">
     <item
         android:id="@+id/action_MainMenu"
         android:title="Main Menu"
-        android:icon="@drawable/ic_apps"
+        android:src="@drawable/ic_apps"
         app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_Trips"
-        android:title="Trips"
-        android:icon="@drawable/ic_trips"
-        app:showAsAction="" />
 
     <item
         android:id="@+id/action_logout"
