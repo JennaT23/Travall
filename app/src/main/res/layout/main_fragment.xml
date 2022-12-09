@@ -1,103 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/MainFragment">
-
+    tools:context=".MainFragment">
 
 
     <Button
         android:id="@+id/Food"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="120dp"
         android:backgroundTint="#FF9933"
-        android:textSize="15sp"
-        android:textColor="#000000"
         android:text="Food"
-        />
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/Transport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Hotels"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Hotels"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="45dp"
         android:backgroundTint="#FF9933"
-        android:textSize="15sp"
+        android:text="Hotels"
         android:textColor="#000000"
-        android:text="Hotels" />
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/Transport"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Food"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Attractions"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="255dp"
-        android:textSize="15sp"
         android:backgroundTint="#FF9933"
+        android:text="Tourist Attractions"
         android:textColor="#000000"
-        android:text="Tourist Attractions" />
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/Spend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Transport"
+        app:layout_constraintTop_toBottomOf="@+id/Food" />
 
     <Button
         android:id="@+id/Transport"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="255dp"
-        android:layout_marginEnd="45dp"
         android:backgroundTint="#FF9933"
-        android:textSize="11sp"
+        android:text="Transportation"
         android:textColor="#000000"
-        android:text="Transportation" />
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/Currency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Attractions"
+        app:layout_constraintTop_toBottomOf="@+id/Hotels" />
 
     <Button
         android:id="@+id/Spend"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="45dp"
-        android:layout_marginBottom="290dp"
         android:backgroundTint="#FF9933"
-        android:textSize="15sp"
+        android:text="Spend Tracker"
         android:textColor="#000000"
-        android:text="Spend Tracker" />
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/Itinerary"
+        app:layout_constraintEnd_toStartOf="@+id/Currency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Attractions" />
 
     <Button
         android:id="@+id/Currency"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="290dp"
         android:backgroundTint="#FF9933"
-        android:textSize="15sp"
+        android:text="Currency Converter"
         android:textColor="#000000"
-        android:text="Currency Converter" />
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/Itinerary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Spend"
+        app:layout_constraintTop_toBottomOf="@+id/Transport" />
 
     <Button
         android:id="@+id/Itinerary"
         android:layout_width="150dp"
         android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="160dp"
         android:backgroundTint="#FF9933"
-        android:textSize="15sp"
+        android:text="Itinerary"
         android:textColor="#000000"
-        android:text="Itinerary" />
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Currency" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</RelativeLayout>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:id="@+id/MainFragment">-->
+
+
+
+<!--    <Button-->
+<!--        android:id="@+id/Food"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="45dp"-->
+<!--        android:layout_marginTop="120dp"-->
+<!--        android:backgroundTint="#FF9933"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:text="Food"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/Hotels"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="120dp"-->
+<!--        android:layout_marginEnd="45dp"-->
+<!--        android:backgroundTint="#FF9933"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:text="Hotels" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/Attractions"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="45dp"-->
+<!--        android:layout_marginTop="255dp"-->
+<!--        android:textSize="15sp"-->
+<!--        android:backgroundTint="#FF9933"-->
+<!--        android:textColor="#000000"-->
+<!--        android:text="Tourist Attractions" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/Transport"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="255dp"-->
+<!--        android:layout_marginEnd="45dp"-->
+<!--        android:backgroundTint="#FF9933"-->
+<!--        android:textSize="11sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:text="Transportation" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/Spend"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginStart="45dp"-->
+<!--        android:layout_marginBottom="290dp"-->
+<!--        android:backgroundTint="#FF9933"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:text="Spend Tracker" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/Currency"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="45dp"-->
+<!--        android:layout_marginBottom="290dp"-->
+<!--        android:backgroundTint="#FF9933"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:text="Currency Converter" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/Itinerary"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="160dp"-->
+<!--        android:backgroundTint="#FF9933"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:text="Itinerary" />-->
+
+
+<!--</RelativeLayout>-->

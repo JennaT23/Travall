@@ -1,105 +1,215 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    tools:context=".Login">
 
 
     <TextView
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="83dp"
         android:text="@string/welcome_to_travall"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#FF4500"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="285dp"
-        android:layout_height="30dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="361dp"
-        android:background="#FFEFD5"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:ignore="Autofill" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59000003"
+        app:srcCompat="@drawable/world_plane" />
 
     <TextView
         android:id="@+id/textViewUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="341dp"
         android:text="Username"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@id/email" />
+<!--        app:layout_constraintVertical_bias="0"-->
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="285dp"
+        android:layout_height="30dp"
+        android:background="#FFEFD5"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
+        tools:ignore="Autofill" />
 
     <TextView
         android:id="@+id/textViewPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="58dp"
-        android:layout_marginBottom="302dp"
         android:text="Password"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="285dp"
         android:layout_height="30dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginBottom="272dp"
         android:background="#FFEFD5"
         android:ems="10"
-        android:inputType="textPassword" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-88dp"
-        app:srcCompat="@drawable/world_plane" />
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/loginbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
 
     <Button
         android:id="@+id/loginbutton"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="175dp"
         android:backgroundTint="#FF9933"
-        android:text="Login" />
+        android:text="Login"
+        app:layout_constraintBottom_toTopOf="@+id/createLoginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
 
     <Button
         android:id="@+id/createLoginButton"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="100dp"
         android:backgroundTint="#FF9933"
-        android:text="Create Login" />
+        android:text="Create Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</RelativeLayout>
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/Title"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="83dp"-->
+<!--        android:text="@string/welcome_to_travall"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+<!--        android:textColor="#FF4500"-->
+<!--        android:textSize="40sp" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/email"-->
+<!--        android:layout_width="285dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginStart="58dp"-->
+<!--        android:layout_marginTop="361dp"-->
+<!--        android:background="#FFEFD5"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        tools:ignore="Autofill" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewUsername"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="58dp"-->
+<!--        android:layout_marginTop="341dp"-->
+<!--        android:text="Username"-->
+<!--        android:textColor="@color/black" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewPassword"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginStart="58dp"-->
+<!--        android:layout_marginBottom="302dp"-->
+<!--        android:text="Password"-->
+<!--        android:textColor="@color/black" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/password"-->
+<!--        android:layout_width="285dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginStart="59dp"-->
+<!--        android:layout_marginBottom="272dp"-->
+<!--        android:background="#FFEFD5"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPassword" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="-88dp"-->
+<!--        app:srcCompat="@drawable/world_plane" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/loginbutton"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginEnd="150dp"-->
+<!--        android:layout_marginBottom="175dp"-->
+<!--        android:backgroundTint="#FF9933"-->
+<!--        android:text="Login" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/createLoginButton"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginEnd="135dp"-->
+<!--        android:layout_marginBottom="100dp"-->
+<!--        android:backgroundTint="#FF9933"-->
+<!--        android:text="Create Login" />-->
+
+
+<!--</RelativeLayout>-->
