@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -13,9 +15,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.laurawilson.travall3.databinding.ActivityMainBinding;
+import com.laurawilson.travall3.databinding.MainFragmentBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 
 
 public class MainMenu extends AppCompatActivity {
@@ -55,7 +59,8 @@ public class MainMenu extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_MainMenu) {
-
+            Intent goToMain = new Intent(this, MainMenu.class);
+            startActivity(goToMain);
 
             return true;
         }
