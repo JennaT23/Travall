@@ -21,8 +21,9 @@ public class TransportWindowFrag extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = TransportWindowFragmentBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        View view = inflater.inflate(R.layout.transport_window_fragment, container, false);
+
+        return view;
 
     }
 

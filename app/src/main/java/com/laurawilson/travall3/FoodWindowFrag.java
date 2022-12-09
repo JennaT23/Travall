@@ -21,8 +21,9 @@ public class FoodWindowFrag extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FoodWindowFragmentBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        View view = inflater.inflate(R.layout.food_window_fragment, container, false);
+
+        return view;
 
     }
 

@@ -20,9 +20,9 @@ public class CurrencyWindowFrag extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = CurrencyWindowFragmentBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        View view = inflater.inflate(R.layout.currency_window_fragment, container, false);
 
+        return view;
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
