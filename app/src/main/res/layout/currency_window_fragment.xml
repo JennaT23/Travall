@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HotelWindowFrag">
+    android:tag="currencyFrag"
+    tools:context=".CurrencyWindowFrag">
 
-    <!-- TODO: Update blank fragment layout -->
+    <Spinner
+        android:id="@+id/toCountries_sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/fromCountries_hint"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90999997" />
+
+    <Button
+        android:id="@+id/scanPrice_btn"
+        android:layout_width="92dp"
+        android:layout_height="67dp"
+        android:text="@string/scanPrice_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/amountToConvert_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toEndOf="@+id/amountToConvert_et"
+        app:layout_constraintTop_toTopOf="@+id/amountToConvert_et" />
+
+    <EditText
+        android:id="@+id/amountToConvert_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/amount_hint"
+        android:inputType="number|numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/fromCountries_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <Spinner
+        android:id="@+id/fromCountries_sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/toCountries_hint"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/toCountries_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94" />
+
+    <Button
+        android:id="@+id/submitButton_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_btn"
+        app:layout_constraintBottom_toTopOf="@+id/convertedAmount_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/convertedAmount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_tv"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

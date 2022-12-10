@@ -16,4 +16,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logout" />
     <string name="action_mainMenu" />
+    <string name="fromCountries_hint">Currency From</string>
+    <string name="scanPrice_btn">Scan Price</string>
+    <string name="amount_hint">amount</string>
+    <string name="submit_btn">convert</string>
+    <string name="result_tv">result</string>
+    <string name="toCountries_hint">Currency to</string>
+    <string name="element_text">element</string>
+    <string name="select_image_for_text_recognition">image for text recognition</string>
+    <string name="find_text_button">find text</string>
+    <string name="select_image">select image</string>
 </resources>

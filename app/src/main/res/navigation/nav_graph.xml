@@ -103,6 +103,9 @@
         <action
             android:id="@+id/action_CurrencyWindowFragment_to_MainFragment"
             app:destination="@id/MainFragment" />
+        <action
+            android:id="@+id/action_CurrencyWindowFrag_to_selectImageFrag"
+            app:destination="@id/selectImageFrag" />
     </fragment>
 
     <fragment
@@ -114,5 +117,23 @@
         <action
             android:id="@+id/action_ItineraryWindowFragment_to_MainFragment"
             app:destination="@id/MainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectImageFrag"
+        android:name="com.laurawilson.travall3.ScanPriceModule.SelectImageFrag"
+        android:label="select_image_fragment"
+        tools:layout="@layout/select_image_fragment" >
+        <action
+            android:id="@+id/action_selectImageFrag_to_selectTextFrag"
+            app:destination="@id/selectTextFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectTextFrag"
+        android:name="com.laurawilson.travall3.ScanPriceModule.SelectTextFrag"
+        android:label="select_text_fragment"
+        tools:layout="@layout/select_text_fragment" >
+        <action
+            android:id="@+id/action_selectTextFrag_to_CurrencyWindowFrag"
+            app:destination="@id/CurrencyWindowFrag" />
     </fragment>
 </navigation>
