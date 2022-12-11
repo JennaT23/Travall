@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,10 +19,13 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.laurawilson.travall3.databinding.PopupBinding;
 import com.laurawilson.travall3.databinding.SpendWindowFragmentBinding;
 
+import java.util.List;
+
 public class SpendWindowFrag extends Fragment {
 
     public Button add;
-    public TextView display;
+    public TextView item;
+    ExpenseBox eB = new ExpenseBox();
 
     @Override
     public View onCreateView(
@@ -30,6 +34,9 @@ public class SpendWindowFrag extends Fragment {
 
        View view = inflater.inflate(R.layout.spend_window_fragment, container, false);
        add = view.findViewById(R.id.AddExpenseButton);
+       item = view.findViewById(R.id.textView);
+
+
 
        add.setOnClickListener(new View.OnClickListener() {
            @Override

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -14,6 +15,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class ExpenseBox extends DialogFragment {
 
 
@@ -21,6 +25,8 @@ public class ExpenseBox extends DialogFragment {
 
     public EditText item, amount;
     public Button save, cancel;
+    public SpendWindowFrag spendFrag;
+    ArrayList <String> expense = new ArrayList<>();
 
 
     @SuppressLint("MissingInflatedId")
@@ -31,6 +37,7 @@ public class ExpenseBox extends DialogFragment {
 
         save = view.findViewById(R.id.cancel);
         cancel = view.findViewById(R.id.save);
+        spendFrag = (SpendWindowFrag) getParentFragmentManager().findFragmentById(R.id.SpendWindowFrag);
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,12 +50,14 @@ public class ExpenseBox extends DialogFragment {
             @Override
             public void onClick(View v) {
                 String input = item.getText().toString();
-                if(!input.equals("")){
+                String price = amount.getText().toString();
+                if(!input.equals("") && !price.equals("")) {
 
-                    //easiest way: just set value;
-                    SpendWindowFrag spendWindowFrag = (SpendWindowFrag) getParentFragmentManager().findFragmentByTag("ExpenseBox");
-                    spendWindowFrag.display.setText(input); 
+                    spendFrag.item = view.findViewById(R.id.textView);
+                    spendFrag.item.setText(input);
                 }
+
+
             }
         });
 
