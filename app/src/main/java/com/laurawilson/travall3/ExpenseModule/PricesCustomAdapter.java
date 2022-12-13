@@ -14,9 +14,8 @@
 * limitations under the License.
 */
 
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.ExpenseModule;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,8 +23,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.laurawilson.travall3.R;
 
 import java.util.ArrayList;
 

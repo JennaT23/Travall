@@ -85,7 +85,7 @@
 
     <fragment
         android:id="@+id/SpendWindowFrag"
-        android:name="com.laurawilson.travall3.SpendWindowFrag"
+        android:name="com.laurawilson.travall3.ExpenseModule.SpendWindowFrag"
         android:label="Spend Tracker"
         tools:layout="@layout/spend_window_fragment">
 
@@ -96,7 +96,7 @@
 
     <fragment
         android:id="@+id/CurrencyWindowFrag"
-        android:name="com.laurawilson.travall3.CurrencyWindowFrag"
+        android:name="com.laurawilson.travall3.ExpenseModule.CurrencyWindowFrag"
         android:label="Currency Converter"
         tools:layout="@layout/currency_window_fragment">
 
@@ -123,7 +123,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectImageFrag"
-        android:name="com.laurawilson.travall3.ScanPriceModule.SelectImageFrag"
+        android:name="com.laurawilson.travall3.ExpenseModule.ScanPriceModule.SelectImageFrag"
         android:label="select_image_fragment"
         tools:layout="@layout/select_image_fragment" >
         <action
@@ -132,7 +132,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectTextFrag"
-        android:name="com.laurawilson.travall3.ScanPriceModule.SelectTextFrag"
+        android:name="com.laurawilson.travall3.ExpenseModule.ScanPriceModule.SelectTextFrag"
         android:label="select_text_fragment"
         tools:layout="@layout/select_text_fragment" >
         <action

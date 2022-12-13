@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.ExpenseModule;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,12 +11,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.laurawilson.travall3.R;
 import com.laurawilson.travall3.databinding.SpendWindowFragmentBinding;
 
 import java.util.ArrayList;
 
 
-public class SpendWindowFrag extends Fragment implements ExpenseBox.OnInputSelected{
+public class SpendWindowFrag extends Fragment implements ExpenseBox.OnInputSelected {
 
 
     private SpendWindowFragmentBinding binding;

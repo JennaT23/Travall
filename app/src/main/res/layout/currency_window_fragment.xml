@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:tag="currencyFrag"
-    tools:context=".CurrencyWindowFrag">
+    tools:context=".ExpenseModule.CurrencyWindowFrag">
 
     <Spinner
         android:id="@+id/toCountries_sp"
