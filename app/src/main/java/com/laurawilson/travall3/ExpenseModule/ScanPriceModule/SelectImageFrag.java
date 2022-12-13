@@ -1,4 +1,4 @@
-package com.laurawilson.travall3.ScanPriceModule;
+package com.laurawilson.travall3.ExpenseModule.ScanPriceModule;
 
 import android.Manifest;
 import android.app.Activity;

@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.ExpenseModule;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+
+import com.laurawilson.travall3.R;
 
 
 public class ExpenseBox extends DialogFragment {

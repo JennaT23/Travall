@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.laurawilson.travall3.ScanPriceModule;
+package com.laurawilson.travall3.ExpenseModule.ScanPriceModule;
 
 import android.content.Context;
 import android.os.Bundle;

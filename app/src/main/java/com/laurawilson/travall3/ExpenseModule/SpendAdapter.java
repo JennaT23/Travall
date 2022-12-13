@@ -14,50 +14,47 @@
  * limitations under the License.
  */
 
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.ExpenseModule;
 
-import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.laurawilson.travall3.R;
+
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
 /**
  *
  * Provide views to RecyclerView with data from mDataSet.
  */
-public class NamesCustomAdapter extends RecyclerView.Adapter<NamesCustomAdapter.ViewHolder> {
+public class SpendAdapter extends RecyclerView.Adapter<SpendAdapter.ViewHolder> {
 
     private static ArrayList<String> names;
+    private static ArrayList<Double> prices;
     private Fragment fragment;
     private FragmentManager fragMang;
     private PricesCustomAdapter pca;
 
-    public NamesCustomAdapter(ArrayList<String> names, Fragment fragment, FragmentManager fragMang, PricesCustomAdapter pca)
+    public SpendAdapter(ArrayList<String> names, ArrayList<Double> prices, Fragment fragment, FragmentManager fragMang)
     {
         this.names = names;
+        this.prices = prices;
         this.fragment = fragment;
         this.fragMang = fragMang;
-        this.pca = pca;
     }
 
     @NonNull
     @Override
-    public NamesCustomAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    public SpendAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
         // this method is use to inflate the layout file
         // which we have created for our recycler view.
@@ -71,9 +68,10 @@ public class NamesCustomAdapter extends RecyclerView.Adapter<NamesCustomAdapter.
 
 
     @Override
-    public void onBindViewHolder(@NonNull NamesCustomAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SpendAdapter.ViewHolder holder, int position) {
         // on below line we are setting text to our text view.
         holder.lngTV.setText(names.get(position));
+        holder.lngTV.setText(prices.get(position).toString());
     }
 
     @Override

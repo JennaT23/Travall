@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.ExpenseModule;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -29,8 +29,10 @@ import java.util.Hashtable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.laurawilson.travall3.ScanPriceModule.TextViewModel;
+import com.laurawilson.travall3.ExpenseModule.ScanPriceModule.TextViewModel;
+import com.laurawilson.travall3.R;
 import com.laurawilson.travall3.databinding.CurrencyWindowFragmentBinding;
+
 
 public class CurrencyWindowFrag extends Fragment {
 
