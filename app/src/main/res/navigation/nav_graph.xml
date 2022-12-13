@@ -96,7 +96,7 @@
 
     <fragment
         android:id="@+id/CurrencyWindowFrag"
-        android:name="com.laurawilson.travall3.CurrencyWindowFrag"
+        android:name="com.laurawilson.travall3.ScanPriceModule.CurrencyWindowFrag"
         android:label="Currency Converter"
         tools:layout="@layout/currency_window_fragment">
 

@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.ScanPriceModule;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,7 +21,7 @@ import androidx.fragment.app.FragmentResultListener;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.laurawilson.travall3.ScanPriceModule.TextViewModel;
+import com.laurawilson.travall3.R;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
