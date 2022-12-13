@@ -26,7 +26,7 @@
             android:value="AIzaSyA-t_gG-tjJqSjSWPPwlm38v35G6VPNSpI" />
 
         <activity
-            android:name=".Login"
+            android:name=".LoginServices.Login"
             android:exported="true"
             android:theme="@style/Theme.Travall3.NoActionBar">
             <intent-filter>
@@ -41,7 +41,7 @@
         </activity>
 
         <activity
-            android:name=".CreateLogin"
+            android:name=".LoginServices.CreateLogin"
             android:exported="true"
             android:theme="@style/Theme.Travall3.NoActionBar">
 

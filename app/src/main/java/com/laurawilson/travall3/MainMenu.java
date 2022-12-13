@@ -1,25 +1,20 @@
 package com.laurawilson.travall3;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.laurawilson.travall3.LoginServices.Login;
 import com.laurawilson.travall3.databinding.ActivityMainBinding;
-import com.laurawilson.travall3.databinding.MainFragmentBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 
 
 public class MainMenu extends AppCompatActivity {

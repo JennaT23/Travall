@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.LocationServicesModule.Maps;
 
 import org.json.JSONArray;
 import org.json.JSONException;

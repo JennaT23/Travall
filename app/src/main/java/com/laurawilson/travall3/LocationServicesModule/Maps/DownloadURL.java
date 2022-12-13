@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.LocationServicesModule.Maps;
 
 import java.io.BufferedReader;
 import java.io.IOException;

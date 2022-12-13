@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.LoginServices;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

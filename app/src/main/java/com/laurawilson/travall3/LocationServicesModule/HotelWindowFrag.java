@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.LocationServicesModule;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.laurawilson.travall3.R;
 import com.laurawilson.travall3.databinding.AttractionWindowFragmentBinding;
 
 import androidx.annotation.NonNull;
@@ -54,7 +55,7 @@ import com.laurawilson.travall3.databinding.FoodWindowFragmentBinding;
 import java.io.IOException;
 import java.util.List;
 
-public class AttractionWindowFrag extends Fragment implements OnMapReadyCallback,
+public class HotelWindowFrag extends Fragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
@@ -74,7 +75,7 @@ public class AttractionWindowFrag extends Fragment implements OnMapReadyCallback
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.attraction_window_fragment, container, false);
+        View view = inflater.inflate(R.layout.hotel_window_fragment, container, false);
 
         return view;
     }

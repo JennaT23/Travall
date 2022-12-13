@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.LoginServices;
 
 
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.laurawilson.travall3.MainMenu;
+import com.laurawilson.travall3.R;
 
 public class Login extends AppCompatActivity {
 

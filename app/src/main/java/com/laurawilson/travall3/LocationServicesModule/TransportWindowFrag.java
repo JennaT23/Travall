@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.LocationServicesModule;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,12 +38,13 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.laurawilson.travall3.R;
 import com.laurawilson.travall3.databinding.FoodWindowFragmentBinding;
 
 import java.io.IOException;
 import java.util.List;
 
-public class FoodWindowFrag extends Fragment implements OnMapReadyCallback,
+public class TransportWindowFrag extends Fragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
@@ -63,7 +64,7 @@ public class FoodWindowFrag extends Fragment implements OnMapReadyCallback,
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.food_window_fragment, container, false);
+        View view = inflater.inflate(R.layout.transport_window_fragment, container, false);
 
         return view;
     }

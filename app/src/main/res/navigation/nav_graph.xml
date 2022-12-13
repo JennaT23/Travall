@@ -41,7 +41,7 @@
 
     <fragment
         android:id="@+id/FoodWindowFrag"
-        android:name="com.laurawilson.travall3.FoodWindowFrag"
+        android:name="com.laurawilson.travall3.LocationServicesModule.FoodWindowFrag"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/food_window_fragment">
 
@@ -52,7 +52,7 @@
 
     <fragment
         android:id="@+id/HotelWindowFrag"
-        android:name="com.laurawilson.travall3.HotelWindowFrag"
+        android:name="com.laurawilson.travall3.LocationServicesModule.HotelWindowFrag"
         android:label="Hotels Near You"
         tools:layout="@layout/hotel_window_fragment">
 
@@ -63,7 +63,7 @@
 
     <fragment
         android:id="@+id/AttractWindowFrag"
-        android:name="com.laurawilson.travall3.AttractionWindowFrag"
+        android:name="com.laurawilson.travall3.LocationServicesModule.AttractionWindowFrag"
         android:label="Attractions Near You"
         tools:layout="@layout/attraction_window_fragment">
 
@@ -74,7 +74,7 @@
 
     <fragment
         android:id="@+id/TransportWindowFrag"
-        android:name="com.laurawilson.travall3.TransportWindowFrag"
+        android:name="com.laurawilson.travall3.LocationServicesModule.TransportWindowFrag"
         android:label="Transportation Near You"
         tools:layout="@layout/transport_window_fragment">
 
@@ -96,7 +96,7 @@
 
     <fragment
         android:id="@+id/CurrencyWindowFrag"
-        android:name="com.laurawilson.travall3.ScanPriceModule.CurrencyWindowFrag"
+        android:name="com.laurawilson.travall3.CurrencyWindowFrag"
         android:label="Currency Converter"
         tools:layout="@layout/currency_window_fragment">
 
