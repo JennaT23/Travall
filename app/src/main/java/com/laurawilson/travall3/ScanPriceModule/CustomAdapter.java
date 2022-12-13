@@ -26,7 +26,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
@@ -57,13 +56,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textView;
-        private TextViewModel viewModel;
-
 
         public ViewHolder(View v, Fragment fragment, ArrayList<String> textList, ViewModelStoreOwner activity, Context activity_context, int resId) {
             super(v);
-
-            viewModel = new ViewModelProvider(activity).get(TextViewModel.class);
 
             // Define click listener for the ViewHolder's View.
             v.setOnClickListener(new View.OnClickListener() {
@@ -92,12 +87,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                                 .navigate(resId);
                     }
 
-//                    Bundle result = new Bundle();
-//                    result.putString("amountKey", price);
-//                    fragment.getParentFragmentManager().setFragmentResult("amountRequestKey", result);
-//
-//                    NavHostFragment.findNavController(fragment)//thirdFragment.this
-//                            .navigate(resId);
                 }
             });
 
