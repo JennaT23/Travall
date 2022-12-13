@@ -2,12 +2,13 @@ package com.laurawilson.travall3.CalendarModule;
 
 import static com.laurawilson.travall3.CalendarModule.CalendarUtils.selectedDate;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -16,33 +17,41 @@ import com.laurawilson.travall3.R;
 import java.time.LocalTime;
 import java.time.format.TextStyle;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
-public class DailyCalendarActivity extends AppCompatActivity
+public class DailyCalendarActivity extends Fragment
 {
 
     private TextView monthDayText;
     private TextView dayOfWeekTV;
     private ListView hourListView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState)
+//    {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_daily_calendar);
+//        initWidgets();
+//    }
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
+        View view = inflater.inflate(R.layout.daily_calendar_fragment, container, false);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_daily_calendar);
-        initWidgets();
+        initWidgets(view);
+
+        return view;
     }
 
-    private void initWidgets()
+    private void initWidgets(View view)
     {
-        monthDayText = findViewById(R.id.monthDayText);
-        dayOfWeekTV = findViewById(R.id.dayOfWeekTV);
-        hourListView = findViewById(R.id.hourListView);
+        monthDayText = view.findViewById(R.id.monthDayText);
+        dayOfWeekTV = view.findViewById(R.id.dayOfWeekTV);
+        hourListView = view.findViewById(R.id.hourListView);
     }
 
     @Override
-    protected void onResume()
+    public void onResume()
     {
         super.onResume();
         setDayView();
@@ -58,7 +67,7 @@ public class DailyCalendarActivity extends AppCompatActivity
 
     private void setHourAdapter()
     {
-        HourAdapter hourAdapter = new HourAdapter(getApplicationContext(), hourEventList());
+        HourAdapter hourAdapter = new HourAdapter(getContext(), hourEventList());
         hourListView.setAdapter(hourAdapter);
     }
 
@@ -91,6 +100,9 @@ public class DailyCalendarActivity extends AppCompatActivity
 
     public void newEventAction(View view)
     {
-        startActivity(new Intent(this, EventEditActivity.class));
+//        startActivity(new Intent(this, EventEditActivity.class));
+
+        Intent intent = new Intent(getActivity(), EventEditActivity.class);
+        startActivity(intent);
     }
 }

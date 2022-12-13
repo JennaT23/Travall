@@ -117,6 +117,9 @@
         <action
             android:id="@+id/action_ItineraryWindowFragment_to_MainFragment"
             app:destination="@id/MainFragment" />
+        <action
+            android:id="@+id/action_ItineraryWindowFrag_to_weekViewActivity"
+            app:destination="@id/weekViewActivity" />
     </fragment>
     <fragment
         android:id="@+id/selectImageFrag"
@@ -136,4 +139,9 @@
             android:id="@+id/action_selectTextFrag_to_CurrencyWindowFrag"
             app:destination="@id/CurrencyWindowFrag" />
     </fragment>
+    <fragment
+        android:id="@+id/weekViewActivity"
+        android:name="com.laurawilson.travall3.CalendarModule.WeekViewActivity"
+        android:label="week_view_fragment"
+        tools:layout="@layout/week_view_fragment" />
 </navigation>
