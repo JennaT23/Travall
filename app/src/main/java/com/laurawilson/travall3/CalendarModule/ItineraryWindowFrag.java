@@ -1,4 +1,4 @@
-package com.laurawilson.travall3;
+package com.laurawilson.travall3.CalendarModule;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

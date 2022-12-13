@@ -110,7 +110,7 @@
 
     <fragment
         android:id="@+id/ItineraryWindowFrag"
-        android:name="com.laurawilson.travall3.ItineraryWindowFrag"
+        android:name="com.laurawilson.travall3.CalendarModule.ItineraryWindowFrag"
         android:label="Itinerary"
         tools:layout="@layout/itinerary_window_fragment">
 
