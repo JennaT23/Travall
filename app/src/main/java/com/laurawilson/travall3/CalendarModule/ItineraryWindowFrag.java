@@ -121,10 +121,4 @@ public class ItineraryWindowFrag extends Fragment implements CalendarAdapter.OnI
         }
     }
 
-
-    public void onDestroyView()
-    {
-        super.onDestroyView();
-    }
-
 }

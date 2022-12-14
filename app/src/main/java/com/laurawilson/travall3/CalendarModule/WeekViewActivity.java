@@ -1,6 +1,5 @@
 package com.laurawilson.travall3.CalendarModule;
 
-import androidx.annotation.NonNull;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,33 +14,20 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import static com.laurawilson.travall3.CalendarModule.CalendarUtils.daysInMonthArray;
 import static com.laurawilson.travall3.CalendarModule.CalendarUtils.daysInWeekArray;
 import static com.laurawilson.travall3.CalendarModule.CalendarUtils.monthYearFromDate;
 
 import com.laurawilson.travall3.R;
-import com.laurawilson.travall3.databinding.ItineraryWindowFragmentBinding;
 
 public class WeekViewActivity extends Fragment implements CalendarAdapter.OnItemListener
 {
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
     private ListView eventListView;
-//    private WeekViewActivityBinding binding;
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState)
-//    {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_week_view);
-//        initWidgets();
-//        setWeekView();
-//    }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.week_view_fragment, container, false);
@@ -66,16 +52,6 @@ public class WeekViewActivity extends Fragment implements CalendarAdapter.OnItem
                         .navigate(R.id.action_weekViewActivity_to_eventEditActivity);
             }
         });
-
-//        binding = ItineraryWindowFragmentBinding.inflate(inflater, container, false);
-//
-//        return binding.getRoot();
-//        // init widget
-//        calendarRecyclerView = view.findViewById(R.id.calendarRecyclerView);
-//        monthYearText = view.findViewById(R.id.monthYearTV);
-//        eventListView = view.findViewById(R.id.eventListView);
-//
-//        setWeekView();
 
         return view;
     }
@@ -114,7 +90,7 @@ public class WeekViewActivity extends Fragment implements CalendarAdapter.OnItem
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 7);
         calendarRecyclerView.setLayoutManager(layoutManager);
         calendarRecyclerView.setAdapter(calendarAdapter);
-        setEventAdpater();
+        setEventAdapter();
     }
 
 
@@ -141,10 +117,10 @@ public class WeekViewActivity extends Fragment implements CalendarAdapter.OnItem
     public void onResume()
     {
         super.onResume();
-        setEventAdpater();
+        setEventAdapter();
     }
 
-    private void setEventAdpater()
+    private void setEventAdapter()
     {
         ArrayList<Event> dailyEvents = Event.eventsForDate(CalendarUtils.selectedDate);
         EventAdapter eventAdapter = new EventAdapter(getContext(), dailyEvents);
