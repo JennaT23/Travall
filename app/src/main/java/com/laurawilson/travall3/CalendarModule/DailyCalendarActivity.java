@@ -3,12 +3,14 @@ package com.laurawilson.travall3.CalendarModule;
 import static com.laurawilson.travall3.CalendarModule.CalendarUtils.selectedDate;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -40,6 +42,14 @@ public class DailyCalendarActivity extends Fragment
         super.onCreate(savedInstanceState);
         initWidgets(view);
 
+        Button newEvent = view.findViewById(R.id.NewEventAction);
+        newEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(DailyCalendarActivity.this)
+                        .navigate(R.id.action_dailyCalendarActivity_to_eventEditActivity);
+            }
+        });
         return view;
     }
 

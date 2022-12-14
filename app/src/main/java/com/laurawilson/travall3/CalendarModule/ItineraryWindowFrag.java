@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 
 import androidx.annotation.NonNull;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.fragment.app.Fragment;
@@ -28,6 +29,7 @@ import static com.laurawilson.travall3.CalendarModule.CalendarUtils.monthYearFro
 import com.laurawilson.travall3.CalendarModule.CalendarAdapter;
 import com.laurawilson.travall3.CalendarModule.CalendarUtils;
 import com.laurawilson.travall3.CalendarModule.WeekViewActivity;
+import com.laurawilson.travall3.ExpenseModule.CurrencyWindowFrag;
 import com.laurawilson.travall3.R;
 import com.laurawilson.travall3.databinding.ItineraryWindowFragmentBinding;
 
@@ -35,31 +37,43 @@ public class ItineraryWindowFrag extends Fragment implements CalendarAdapter.OnI
 {
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
-
     private ItineraryWindowFragmentBinding binding;
 
 
     @Override
     public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.itinerary_window_fragment, container, false);
-
-        return view;
-
-//        binding = ItineraryWindowFragmentBinding.inflate(inflater, container, false);
+//        View view = inflater.inflate(R.layout.itinerary_window_fragment, container, false);
 //
-//        return binding.getRoot();
+//        return view;
+
+        binding = ItineraryWindowFragmentBinding.inflate(inflater, container, false);
+
+        return binding.getRoot();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
-        super.onCreate(savedInstanceState);
+//        super.onCreate(savedInstanceState);
         initWidgets(view);
         CalendarUtils.selectedDate = LocalDate.now();
         setMonthView();
 
+        Button weeklyButton = view.findViewById(R.id.WeeklyAction);
+
+        // weekly view button
+        binding.WeeklyAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(ItineraryWindowFrag.this)
+                        .navigate(R.id.action_ItineraryWindowFrag_to_weekViewActivity);
+            }
+        });
+
     }
+
 
     private void initWidgets(View view)
     {
@@ -79,7 +93,6 @@ public class ItineraryWindowFrag extends Fragment implements CalendarAdapter.OnI
         calendarRecyclerView.setAdapter(calendarAdapter);
     }
 
-
     public void previousMonthAction(View view)
     {
         CalendarUtils.selectedDate = CalendarUtils.selectedDate.minusMonths(1);
@@ -90,6 +103,11 @@ public class ItineraryWindowFrag extends Fragment implements CalendarAdapter.OnI
     {
         CalendarUtils.selectedDate = CalendarUtils.selectedDate.plusMonths(1);
         setMonthView();
+    }
+
+    public void weeklyAction(View view)
+    {
+        startActivity(new Intent(getActivity(), WeekViewActivity.class));
     }
 
     @Override
@@ -104,19 +122,9 @@ public class ItineraryWindowFrag extends Fragment implements CalendarAdapter.OnI
     }
 
 
-//    public void weeklyAction(View view)
-//    {
-//        Intent intent = new Intent(getActivity(), WeekViewActivity.class);
-//        startActivity(intent);
-//    }
-
     public void onDestroyView()
     {
         super.onDestroyView();
     }
 
-    public void weeklyAction(View view)
-    {
-        startActivity(new Intent(getActivity(), WeekViewActivity.class));
-    }
 }

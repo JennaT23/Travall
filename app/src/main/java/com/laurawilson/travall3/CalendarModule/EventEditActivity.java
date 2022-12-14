@@ -1,11 +1,13 @@
 package com.laurawilson.travall3.CalendarModule;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -34,9 +36,21 @@ public class EventEditActivity extends Fragment
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.daily_calendar_fragment, container, false);
+        View view = inflater.inflate(R.layout.activity_event_edit, container, false);
         super.onCreate(savedInstanceState);
         initWidgets(view);
+
+        Button save = view.findViewById(R.id.SaveEvent);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String eventName = eventNameET.getText().toString();
+                Event newEvent = new Event(eventName, CalendarUtils.selectedDate, time);
+                Event.eventsList.add(newEvent);
+            }
+        });
+
+
         return view;
     }
 

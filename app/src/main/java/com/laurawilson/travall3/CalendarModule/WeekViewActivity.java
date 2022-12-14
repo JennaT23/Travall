@@ -1,5 +1,7 @@
 package com.laurawilson.travall3.CalendarModule;
 
+import androidx.annotation.NonNull;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.fragment.app.Fragment;
@@ -10,6 +12,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,12 +25,14 @@ import static com.laurawilson.travall3.CalendarModule.CalendarUtils.daysInWeekAr
 import static com.laurawilson.travall3.CalendarModule.CalendarUtils.monthYearFromDate;
 
 import com.laurawilson.travall3.R;
+import com.laurawilson.travall3.databinding.ItineraryWindowFragmentBinding;
 
 public class WeekViewActivity extends Fragment implements CalendarAdapter.OnItemListener
 {
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
     private ListView eventListView;
+//    private WeekViewActivityBinding binding;
 
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState)
@@ -38,27 +43,67 @@ public class WeekViewActivity extends Fragment implements CalendarAdapter.OnItem
 //        setWeekView();
 //    }
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.week_view_fragment, container, false);
-        super.onCreate(savedInstanceState);
-
-        // init widget
-        calendarRecyclerView = view.findViewById(R.id.calendarRecyclerView);
-        monthYearText = view.findViewById(R.id.monthYearTV);
-        eventListView = view.findViewById(R.id.eventListView);
-
+        initWidgets(view);
         setWeekView();
+
+        Button dailyButton = view.findViewById(R.id.DailyAction);
+        Button newEvent = view.findViewById(R.id.NewEventAction);
+
+        dailyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(WeekViewActivity.this)
+                        .navigate(R.id.action_weekViewActivity_to_dailyCalendarActivity);
+            }
+        });
+
+        newEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(WeekViewActivity.this)
+                        .navigate(R.id.action_weekViewActivity_to_eventEditActivity);
+            }
+        });
+
+//        binding = ItineraryWindowFragmentBinding.inflate(inflater, container, false);
+//
+//        return binding.getRoot();
+//        // init widget
+//        calendarRecyclerView = view.findViewById(R.id.calendarRecyclerView);
+//        monthYearText = view.findViewById(R.id.monthYearTV);
+//        eventListView = view.findViewById(R.id.eventListView);
+//
+//        setWeekView();
 
         return view;
     }
 
-//    private void initWidgets()
+//    @Override
+//    public void onViewCreated(@NonNull View view, Bundle savedInstanceState)
 //    {
-//        calendarRecyclerView = findViewById(R.id.calendarRecyclerView);
-//        monthYearText = findViewById(R.id.monthYearTV);
-//        eventListView = findViewById(R.id.eventListView);
+//        super.onViewCreated(view, savedInstanceState);
+//
+
+
+//        binding.previousMonthAction.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                weeklyAction(view);
+//                System.out.println("Onclick weekhgd5044");
+//                NavHostFragment.findNavController(ItineraryWindowFrag.this)
+//                        .navigate(R.id.action_weekViewActivity_to_dailyCalendarActivity);
+//            }
+//        });
 //    }
+
+    private void initWidgets(View view)
+    {
+        calendarRecyclerView = view.findViewById(R.id.calendarRecyclerView);
+        monthYearText = view.findViewById(R.id.monthYearTV);
+        eventListView = view.findViewById(R.id.eventListView);
+    }
 
     private void setWeekView()
     {

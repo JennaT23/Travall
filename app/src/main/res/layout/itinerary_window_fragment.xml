@@ -29,17 +29,6 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp">
 
-        <Button
-            android:id="@+id/previousMonthAction"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/back"
-            android:textColor="@color/white"
-            android:background="@null"
-            android:textStyle="bold"
-            android:onClick="previousMonthAction"
-            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/monthYearTV"
@@ -51,17 +40,6 @@
             android:textAlignment="center"
             android:textColor="@color/black"/>
 
-        <Button
-            android:id="@+id/nextMonthAction"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/forward"
-            android:textColor="@color/white"
-            android:background="@null"
-            android:textStyle="bold"
-            android:onClick="nextMonthAction"
-            android:textSize="20sp"/>
 
     </LinearLayout>
 

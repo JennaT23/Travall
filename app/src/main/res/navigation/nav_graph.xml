@@ -143,5 +143,26 @@
         android:id="@+id/weekViewActivity"
         android:name="com.laurawilson.travall3.CalendarModule.WeekViewActivity"
         android:label="week_view_fragment"
-        tools:layout="@layout/week_view_fragment" />
+        tools:layout="@layout/week_view_fragment" >
+        <action
+            android:id="@+id/action_weekViewActivity_to_dailyCalendarActivity"
+            app:destination="@id/dailyCalendarActivity" />
+        <action
+            android:id="@+id/action_weekViewActivity_to_eventEditActivity"
+            app:destination="@id/eventEditActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/dailyCalendarActivity"
+        android:name="com.laurawilson.travall3.CalendarModule.DailyCalendarActivity"
+        android:label="daily_calendar_fragment"
+        tools:layout="@layout/daily_calendar_fragment" >
+        <action
+            android:id="@+id/action_dailyCalendarActivity_to_eventEditActivity"
+            app:destination="@id/eventEditActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventEditActivity"
+        android:name="com.laurawilson.travall3.CalendarModule.EventEditActivity"
+        android:label="activity_event_edit"
+        tools:layout="@layout/activity_event_edit" />
 </navigation>
