@@ -50,9 +50,9 @@ public class AttractionWindowFrag extends Fragment implements OnMapReadyCallback
     private LocationManager locationManager;
     private Marker currentLocationMarker;
     public static final int REQUEST_LOCATION_CODE = 99;
-    int PROXIMITY_RADIUS = 15000;
-    double latitude, longitude;
-    Button attractnear;
+    private int PROXIMITY_RADIUS = 15000;
+    private double latitude, longitude;
+    private Button attractnear;
 
 
     @Nullable

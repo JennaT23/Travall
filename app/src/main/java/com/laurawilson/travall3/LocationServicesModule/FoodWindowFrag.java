@@ -52,7 +52,7 @@ public class FoodWindowFrag extends Fragment implements OnMapReadyCallback,
     public static final int REQUEST_LOCATION_CODE = 99;
     int PROXIMITY_RADIUS = 15000;
     double latitude, longitude;
-    Button foodnear;
+    private Button foodnear;
 
 
     @Nullable

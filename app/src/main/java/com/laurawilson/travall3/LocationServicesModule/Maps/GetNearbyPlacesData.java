@@ -14,9 +14,9 @@ import java.util.Objects;
 
 public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
 
-    String googlePlacesData;
-    GoogleMap mMap;
-    String url;
+    protected String googlePlacesData;
+    protected GoogleMap mMap;
+    protected String url;
 
     @Override
     protected String doInBackground(Object... objects) {
@@ -39,14 +39,14 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             HashMap<String, String> googlePLace = nearbyPlaceList.get(i);
 
             String placeName = googlePLace.get("name");
-            String adress = googlePLace.get("formatted_address");
+            String address = googlePLace.get("formatted_address");
             double lat = Double.parseDouble(Objects.requireNonNull(googlePLace.get("lat")));
             double lng = Double.parseDouble(Objects.requireNonNull(googlePLace.get("lng")));
 
             LatLng latLng = new LatLng(lat, lng);
 
             markerOptions.position(latLng);
-            markerOptions.title(placeName + " " + adress);
+            markerOptions.title(placeName + " " + address);
             markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
 
             mMap.addMarker(markerOptions);
