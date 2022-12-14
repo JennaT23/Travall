@@ -65,7 +65,6 @@ public class TransportWindowFrag extends Fragment implements OnMapReadyCallback,
 
         //initialize map fragment
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        assert supportMapFragment != null;
         supportMapFragment.getMapAsync(this);
 
         if (ActivityCompat.checkSelfPermission(TransportWindowFrag.this.requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(TransportWindowFrag.this.requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -91,9 +90,8 @@ public class TransportWindowFrag extends Fragment implements OnMapReadyCallback,
                 Object[] dataTransfer = new Object[2];
                 GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
 
-                mMap.clear();
-                String food = "restaurant";
-                String url = getUrl(latitude, longitude, food);
+                String transport = "subway_station";
+                String url = getUrl(latitude, longitude, transport);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
                 getNearbyPlacesData.execute(dataTransfer);

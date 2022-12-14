@@ -65,7 +65,6 @@ public class FoodWindowFrag extends Fragment implements OnMapReadyCallback,
 
         //initialize map fragment
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        assert supportMapFragment != null;
         supportMapFragment.getMapAsync(this);
 
         if (ActivityCompat.checkSelfPermission(FoodWindowFrag.this.requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(FoodWindowFrag.this.requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

@@ -65,7 +65,6 @@ public class AttractionWindowFrag extends Fragment implements OnMapReadyCallback
 
         //initialize map fragment
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        assert supportMapFragment != null;
         supportMapFragment.getMapAsync(this);
 
         if (ActivityCompat.checkSelfPermission(AttractionWindowFrag.this.requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(AttractionWindowFrag.this.requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -92,8 +91,8 @@ public class AttractionWindowFrag extends Fragment implements OnMapReadyCallback
                 GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
 
                 mMap.clear();
-                String food = "restaurant";
-                String url = getUrl(latitude, longitude, food);
+                String attraction = "tourist_attraction";
+                String url = getUrl(latitude, longitude, attraction);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
                 getNearbyPlacesData.execute(dataTransfer);
