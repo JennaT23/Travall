@@ -17,8 +17,8 @@ import com.laurawilson.travall3.R;
 
 public class Login extends AppCompatActivity {
 
-    Button login, createLogin;
-    EditText username, password;
+    private Button login, createLogin;
+    private EditText username, password;
     UserDB userdb;
 
     @Override

@@ -8,9 +8,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class UserDB extends SQLiteOpenHelper {
 
     public static final String name = "User.DB";
+
+
     public UserDB (Context context) {
         super(context, name, null, 1);
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table users(username TEXT primary key, password TEXT)");

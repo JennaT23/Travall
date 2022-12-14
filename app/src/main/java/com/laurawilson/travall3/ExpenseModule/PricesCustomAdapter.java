@@ -43,7 +43,7 @@ public class PricesCustomAdapter extends RecyclerView.Adapter<PricesCustomAdapte
         return prices;
     }
 
-    public PricesCustomAdapter(ArrayList<Double> prices, Context context)
+    public PricesCustomAdapter(ArrayList<Double> prices)
     {
         this.prices = prices;
     }

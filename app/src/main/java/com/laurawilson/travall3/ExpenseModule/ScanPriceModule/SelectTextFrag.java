@@ -26,10 +26,10 @@ public class SelectTextFrag extends Fragment {
         LINEAR_LAYOUT_MANAGER
     }
 
-    protected LayoutManagerType mCurrentLayoutManagerType;
-    protected RecyclerView mRecyclerView;
-    protected CustomAdapter mAdapter;
-    protected RecyclerView.LayoutManager mLayoutManager;
+    private LayoutManagerType mCurrentLayoutManagerType;
+    private RecyclerView mRecyclerView;
+    private CustomAdapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
     private TextViewModel viewModel;
     private ArrayList<String> textList;
 
@@ -71,7 +71,7 @@ public class SelectTextFrag extends Fragment {
 
 
         int returnAction = viewModel.getReturnAction();
-        mAdapter = new CustomAdapter(textList, SelectTextFrag.this, getActivity(), requireActivity(), returnAction);
+        mAdapter = new CustomAdapter(textList, SelectTextFrag.this, requireActivity(), returnAction);
 
         // Set CustomAdapter as the adapter for RecyclerView.
         mRecyclerView.setAdapter(mAdapter);

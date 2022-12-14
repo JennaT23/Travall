@@ -45,7 +45,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     private Fragment fragment;
     private ArrayList<String> textList;
-    private ViewModelStoreOwner activity;
     private int resId;
     private Context activity_context;
 
@@ -57,7 +56,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         private TextView textView;
 
-        public ViewHolder(View v, Fragment fragment, ArrayList<String> textList, ViewModelStoreOwner activity, Context activity_context, int resId) {
+        public ViewHolder(View v, Fragment fragment, ArrayList<String> textList, Context activity_context, int resId) {
             super(v);
 
             // Define click listener for the ViewHolder's View.
@@ -105,10 +104,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
      *
      * @param dataSet String[] containing the data to populate views to be used by RecyclerView.
      */
-    public CustomAdapter(ArrayList<String> dataSet, Fragment frag, ViewModelStoreOwner activity, Context activity_context, int resId) {
+    public CustomAdapter(ArrayList<String> dataSet, Fragment frag, Context activity_context, int resId) {
         fragment = frag;
         textList = dataSet;
-        this.activity = activity;
+//        this.activity = activity;
         this.resId = resId;
         this.activity_context = activity_context;
     }
@@ -122,7 +121,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.text_row_item, viewGroup, false);
 
-        return new ViewHolder(v, fragment, textList, activity, activity_context, resId);
+        return new ViewHolder(v, fragment, textList, activity_context, resId);
     }
     // END_INCLUDE(recyclerViewOnCreateViewHolder)
 

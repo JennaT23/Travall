@@ -18,12 +18,11 @@ import com.laurawilson.travall3.R;
 
 public class ExpenseBox extends DialogFragment {
 
-    public OnInputSelected mOnInputSelected;
+    OnInputSelected mOnInputSelected;
 
-    //widgets
-    public EditText item, amount;
-    public Button save, cancel;
-    public SpendWindowFrag spendFrag;
+    protected EditText item, amount;
+    private Button save, cancel;
+    protected SpendWindowFrag spendFrag;
 
 
     @SuppressLint("MissingInflatedId")

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -29,6 +30,8 @@ public class SpendWindowFrag extends Fragment implements ExpenseBox.OnInputSelec
     private static PricesCustomAdapter mPriceAdapter;
     private static RecyclerView mPricesRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
+    private static Double total=0.0;
+    private TextView totalView;
     ///////////////////
 //    private static SpendAdapter spendAdapter;
     /////////////////
@@ -47,6 +50,9 @@ public class SpendWindowFrag extends Fragment implements ExpenseBox.OnInputSelec
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        totalView = view.findViewById(R.id.total);
+        totalView.setText(total.toString());
+
         // BEGIN_INCLUDE(initializeRecyclerView)
         mNamesRecyclerView = view.findViewById(R.id.recyclerViewNames);
         mPricesRecyclerView = view.findViewById(R.id.recyclerViewPrices);
@@ -55,8 +61,9 @@ public class SpendWindowFrag extends Fragment implements ExpenseBox.OnInputSelec
         mNamesRecyclerView.setLayoutManager(mLayoutManager);
 
         System.out.println("names size: " + names.size());
-        mPriceAdapter = new PricesCustomAdapter(prices, getActivity());
-        mNameAdapter = new NamesCustomAdapter(names, SpendWindowFrag.this, getParentFragmentManager(), mPriceAdapter);
+        mPriceAdapter = new PricesCustomAdapter(prices);
+        mNameAdapter = new NamesCustomAdapter(names);
+//        mNameAdapter = new NamesCustomAdapter(names, SpendWindowFrag.this, getParentFragmentManager(), mPriceAdapter);
 
 
         mNamesRecyclerView.setAdapter(mNameAdapter);
@@ -126,14 +133,17 @@ public class SpendWindowFrag extends Fragment implements ExpenseBox.OnInputSelec
 
     @Override
     public void sendInput(String name, double price) {
-        System.out.println("got input");
+        total+=price;
+        totalView.setText(total.toString());
+
         if(names.size()==0 || prices.size()==0)
         {
             names.add(name);
             prices.add(price);
 
-            mPriceAdapter = new PricesCustomAdapter(prices, getActivity());
-            mNameAdapter = new NamesCustomAdapter(names, SpendWindowFrag.this, getParentFragmentManager(), mPriceAdapter);
+            mPriceAdapter = new PricesCustomAdapter(prices);
+            mNameAdapter = new NamesCustomAdapter(names);
+//            mNameAdapter = new NamesCustomAdapter(names, SpendWindowFrag.this, getParentFragmentManager(), mPriceAdapter);
 
 
             mNamesRecyclerView.setAdapter(mNameAdapter);

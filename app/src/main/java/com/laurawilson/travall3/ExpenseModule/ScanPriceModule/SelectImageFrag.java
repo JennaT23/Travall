@@ -212,7 +212,7 @@ public class SelectImageFrag extends Fragment {
     }
 
 
-    public void scaleImage()
+    private void scaleImage()
     {
         if (mSelectedImage != null) {
             // Get the dimensions of the View

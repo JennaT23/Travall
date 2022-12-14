@@ -43,13 +43,20 @@ public class NamesCustomAdapter extends RecyclerView.Adapter<NamesCustomAdapter.
     private FragmentManager fragMang;
     private PricesCustomAdapter pca;
 
-    public NamesCustomAdapter(ArrayList<String> names, Fragment fragment, FragmentManager fragMang, PricesCustomAdapter pca)
+    public NamesCustomAdapter(ArrayList<String> names)
     {
         this.names = names;
         this.fragment = fragment;
         this.fragMang = fragMang;
         this.pca = pca;
     }
+//    public NamesCustomAdapter(ArrayList<String> names, Fragment fragment, FragmentManager fragMang, PricesCustomAdapter pca)
+//    {
+//        this.names = names;
+//        this.fragment = fragment;
+//        this.fragMang = fragMang;
+//        this.pca = pca;
+//    }
 
     @NonNull
     @Override

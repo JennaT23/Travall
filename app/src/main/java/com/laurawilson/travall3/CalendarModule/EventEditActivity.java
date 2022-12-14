@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.laurawilson.travall3.R;
-import com.laurawilson.travall3.ScanPriceModule.TextViewModel;
 
 import java.time.LocalTime;
 
