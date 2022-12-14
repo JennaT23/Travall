@@ -18,7 +18,7 @@ public class CreateLogin extends AppCompatActivity {
 
     private Button create;
     private EditText username, password, repassword;
-    UserDB userdb;
+    protected UserDB userdb;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){

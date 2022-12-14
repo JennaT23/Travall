@@ -19,7 +19,7 @@ public class Login extends AppCompatActivity {
 
     private Button login, createLogin;
     private EditText username, password;
-    UserDB userdb;
+    protected UserDB userdb;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

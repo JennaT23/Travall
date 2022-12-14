@@ -38,21 +38,19 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             MarkerOptions markerOptions = new MarkerOptions();
             HashMap<String, String> googlePLace = nearbyPlaceList.get(i);
 
-            String placeName = googlePLace.get("place_name");
-            String vicinity = googlePLace.get("vicinity");
+            String placeName = googlePLace.get("name");
+            String adress = googlePLace.get("formatted_address");
             double lat = Double.parseDouble(Objects.requireNonNull(googlePLace.get("lat")));
             double lng = Double.parseDouble(Objects.requireNonNull(googlePLace.get("lng")));
 
             LatLng latLng = new LatLng(lat, lng);
 
             markerOptions.position(latLng);
-            markerOptions.title(placeName + " " + vicinity);
+            markerOptions.title(placeName + " " + adress);
             markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
 
             mMap.addMarker(markerOptions);
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 5));
-            //mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
-
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         }
     }
     @Override

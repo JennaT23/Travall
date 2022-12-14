@@ -11,28 +11,15 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LocationServicesModule.FoodWindowFrag"
-        />
-
-    <EditText
-        android:id="@+id/SearchBox"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="26dp"
-        android:ems="10"
-        android:hint="Search"
-        android:inputType="textPersonName" />
+        tools:context=".LocationServicesModule.FoodWindowFrag" />
 
     <Button
-        android:id="@+id/SearchButton"
+        android:id="@+id/foodNearMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="277dp"
-        android:layout_marginTop="26dp"
-        android:text="Search" />
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="29dp"
+        android:text="Food Near Me" />
 </RelativeLayout>
