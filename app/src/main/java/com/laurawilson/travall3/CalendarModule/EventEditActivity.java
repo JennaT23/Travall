@@ -44,9 +44,7 @@ public class EventEditActivity extends Fragment
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String eventName = eventNameET.getText().toString();
-                Event newEvent = new Event(eventName, CalendarUtils.selectedDate, time);
-                Event.eventsList.add(newEvent);
+                saveEventAction(view);
             }
         });
 
@@ -68,6 +66,10 @@ public class EventEditActivity extends Fragment
         Event.eventsList.add(newEvent);
         // finish
         onDestroyView();
+    }
+    public void onDestroyView()
+    {
+        super.onDestroyView();
     }
 
 }
