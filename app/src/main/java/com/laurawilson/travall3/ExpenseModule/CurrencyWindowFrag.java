@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentResultListener;
 import androidx.lifecycle.ViewModelProvider;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -142,12 +144,20 @@ public class CurrencyWindowFrag extends Fragment {
         submitButton.setOnClickListener(
                 new View.OnClickListener()
                 {
-
                     public void onClick(View view)
                     {
-                        amount = Double.parseDouble(amount_et.getText().toString()); // get amount
-                        convertedAmount = convert(amount); // convert amount
-                        convertedAmount_tv.setText(String.valueOf(convertedAmount)); // display converted amount
+                        String empty = amount_et.getText().toString();
+                        if (empty.equals("")) {
+                            System.out.println("hi");
+                            Toast.makeText(CurrencyWindowFrag.this.getActivity(), "You did not enter an amount", Toast.LENGTH_LONG).show();
+                        }
+                        else
+                        {
+                            amount = Double.parseDouble(amount_et.getText().toString()); // get amount
+                            convertedAmount = convert(amount); // convert amount
+                            convertedAmount_tv.setText(String.valueOf(convertedAmount)); // display converted amount
+                        }
+
                     }
                 });
 
